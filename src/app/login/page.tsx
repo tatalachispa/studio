@@ -21,7 +21,7 @@ export default function LoginPage() {
         <div className="mx-auto grid w-[350px] gap-6">
           <div className="grid gap-2 text-center">
             <Link href="/" className="flex justify-center items-center space-x-2 mb-4">
-                <RestoGoLogo className="h-8 w-auto text-primary-foreground" />
+                <RestoGoLogo className="h-8 w-auto text-primary" />
             </Link>
             <h1 className="text-3xl font-bold font-headline">Login</h1>
             <p className="text-balance text-muted-foreground">

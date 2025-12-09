@@ -15,8 +15,8 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
         fontFamily="'Playfair Display', serif"
         fontSize="100"
         fontWeight="bold"
-        fill="hsl(var(--primary-foreground))"
-        className="fill-current text-primary-foreground"
+        fill="hsl(var(--primary))"
+        className="fill-current text-primary"
       >
         RG
       </text>
@@ -28,7 +28,7 @@ export function RestoGoLogo(props: SVGProps<SVGSVGElement>) {
   return (
     <div className="flex items-center" {...props}>
       <span 
-        className="font-headline text-2xl font-bold tracking-tight text-primary-foreground"
+        className="font-headline text-2xl font-bold tracking-tight text-primary"
       >
         RestoGo
       </span>
