@@ -1,3 +1,94 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-dining",
+      "description": "Elegant restaurant dining table setup",
+      "imageUrl": "https://images.unsplash.com/photo-1676658153750-58342fe41e14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyZXN0YXVyYW50JTIwZGluaW5nfGVufDB8fHx8MTc2NTMxNzQxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "restaurant dining"
+    },
+    {
+      "id": "bruschetta",
+      "description": "Classic bruschetta with tomatoes and basil",
+      "imageUrl": "https://images.unsplash.com/photo-1614874044863-95c6cc6b6cf3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhcHBldGl6ZXIlMjBicmVhZHxlbnwwfHx8fDE3NjUzMTc0MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "appetizer bread"
+    },
+    {
+      "id": "calamari",
+      "description": "Fried calamari with a lemon wedge",
+      "imageUrl": "https://images.unsplash.com/photo-1759823338930-7996c1787c3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmcmllZCUyMHNlYWZvb2R8ZW58MHx8fHwxNzY1MzE3NDE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fried seafood"
+    },
+    {
+      "id": "caprese-salad",
+      "description": "Caprese salad with tomatoes, mozzarella, and basil",
+      "imageUrl": "https://images.unsplash.com/photo-1654458804670-2f4f26ab3154?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmcmVzaCUyMHNhbGFkfGVufDB8fHx8MTc2NTI2NzE2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fresh salad"
+    },
+    {
+      "id": "lasagna",
+      "description": "A slice of homemade lasagna",
+      "imageUrl": "https://images.unsplash.com/photo-1546549032-9571cd6b27df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwYXN0YSUyMGRpc2h8ZW58MHx8fHwxNzY1Mjg1MDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pasta dish"
+    },
+    {
+      "id": "salmon-dish",
+      "description": "Grilled salmon with asparagus",
+      "imageUrl": "https://images.unsplash.com/photo-1641898378716-1f38ec04bb0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxncmlsbGVkJTIwZmlzaHxlbnwwfHx8fDE3NjUyODcyMDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "grilled fish"
+    },
+    {
+      "id": "ribeye-steak",
+      "description": "Juicy ribeye steak with herbs",
+      "imageUrl": "https://images.unsplash.com/photo-1508615263227-c5d58c1e5821?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxncmlsbGVkJTIwc3RlYWt8ZW58MHx8fHwxNzY1MzE3NDE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "grilled steak"
+    },
+    {
+      "id": "risotto",
+      "description": "Creamy mushroom risotto",
+      "imageUrl": "https://images.unsplash.com/photo-1673646961623-40914a7e1932?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyaWNlJTIwZGlzaHxlbnwwfHx8fDE3NjUyMTM5Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rice dish"
+    },
+    {
+      "id": "tiramisu",
+      "description": "A slice of classic tiramisu",
+      "imageUrl": "https://images.unsplash.com/photo-1642588355539-1fa4ebb910c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkZXNzZXJ0JTIwY2FrZXxlbnwwfHx8fDE3NjUyMjc2MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dessert cake"
+    },
+    {
+      "id": "panna-cotta",
+      "description": "Panna cotta with berry sauce",
+      "imageUrl": "https://images.unsplash.com/photo-1663904458920-f153c162fa79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjcmVhbSUyMGRlc3NlcnR8ZW58MHx8fHwxNzY1MzE3NDE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cream dessert"
+    },
+    {
+      "id": "chocolate-lava-cake",
+      "description": "Chocolate lava cake with a molten center",
+      "imageUrl": "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaG9jb2xhdGUlMjBjYWtlfGVufDB8fHx8MTc2NTE5MzM0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chocolate cake"
+    },
+    {
+      "id": "red-wine",
+      "description": "A glass of red wine",
+      "imageUrl": "https://images.unsplash.com/photo-1597905722448-a1df7c00000a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3aW5lJTIwZ2xhc3N8ZW58MHx8fHwxNzY1MjA3OTA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wine glass"
+    },
+    {
+      "id": "mineral-water",
+      "description": "A bottle of sparkling mineral water",
+      "imageUrl": "https://images.unsplash.com/photo-1561041695-d2fadf9f318c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3YXRlciUyMGJvdHRsZXxlbnwwfHx8fDE3NjUyNDY3NzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "water bottle"
+    },
+    {
+      "id": "espresso",
+      "description": "A cup of espresso",
+      "imageUrl": "https://images.unsplash.com/photo-1512568400610-62da28bc8a13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb2ZmZWUlMjBjdXB8ZW58MHx8fHwxNzY1MzEwNTI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee cup"
+    },
+    {
+      "id": "login-background",
+      "description": "A cozy cafe interior",
+      "imageUrl": "https://images.unsplash.com/photo-1579341560277-4dfaddaf6e98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjYWZlJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzY1MjMxODYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cafe interior"
+    }
+  ]
 }
