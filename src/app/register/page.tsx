@@ -1,6 +1,11 @@
+
+'use client';
 import Link from "next/link"
 import Image from "next/image"
-
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '@/lib/firebase';
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -13,9 +18,34 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { RestoGoLogo } from "@/components/icons"
+import { useToast } from "@/hooks/use-toast";
 
 export default function RegisterPage() {
     const bgImage = PlaceHolderImages.find(img => img.id === 'login-background');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [name, setName] = useState('');
+    const router = useRouter();
+    const { toast } = useToast();
+
+    const handleRegister = async (e: React.FormEvent) => {
+        e.preventDefault();
+        try {
+            await createUserWithEmailAndPassword(auth, email, password);
+            toast({
+                title: "¡Cuenta Creada!",
+                description: "Tu cuenta ha sido creada con éxito.",
+            });
+            router.push('/');
+        } catch (error: any) {
+            toast({
+                variant: "destructive",
+                title: "Error de Registro",
+                description: error.message,
+            });
+        }
+    };
+
   return (
     <div className="w-full lg:grid lg:min-h-screen lg:grid-cols-2">
       <div className="flex items-center justify-center py-12">
@@ -29,31 +59,35 @@ export default function RegisterPage() {
               Crea una cuenta para empezar a hacer pedidos
             </p>
           </div>
-          <div className="grid gap-4">
-            <div className="grid gap-2">
-              <Label htmlFor="first-name">Nombre</Label>
-              <Input id="first-name" placeholder="Max" required />
+          <form onSubmit={handleRegister}>
+            <div className="grid gap-4">
+              <div className="grid gap-2">
+                <Label htmlFor="first-name">Nombre</Label>
+                <Input id="first-name" placeholder="Max" required value={name} onChange={(e) => setName(e.target.value)} />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="m@example.com"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="password">Contraseña</Label>
+                <Input id="password" type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
+              </div>
+              <Button type="submit" className="w-full">
+                Crear cuenta
+              </Button>
+              <Button variant="outline" className="w-full" disabled>
+                Registrarse con Google
+              </Button>
             </div>
-            <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="m@example.com"
-                required
-              />
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="password">Contraseña</Label>
-              <Input id="password" type="password" />
-            </div>
-            <Button type="submit" className="w-full">
-              Crear cuenta
-            </Button>
-            <Button variant="outline" className="w-full">
-              Registrarse con Google
-            </Button>
-          </div>
+          </form>
           <div className="mt-4 text-center text-sm">
             ¿Ya tienes una cuenta?{" "}
             <Link href="/login" className="underline">
