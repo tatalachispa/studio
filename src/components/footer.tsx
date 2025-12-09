@@ -12,6 +12,7 @@ export function Footer() {
           </p>
         </div>
         <div className="flex items-center gap-4 text-sm text-muted-foreground">
+          <Link href="/admin" className="transition-colors hover:text-foreground">Admin</Link>
           <Link href="/login" className="transition-colors hover:text-foreground">Login</Link>
           <Link href="/register" className="transition-colors hover:text-foreground">Registro</Link>
         </div>

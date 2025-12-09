@@ -6,6 +6,8 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { DinerSelector } from '@/components/diner-selector';
 import { MenuSection } from '@/components/menu-section';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 
 function HeroSection() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-dining');
@@ -35,9 +37,12 @@ function HeroSection() {
   );
 }
 
-export default function Home() {
+export default async function Home() {
   const categories: SerializableCategory[] = getSerializableCategories();
-  const products: Product[] = getProducts();
+  
+  const productsCollection = collection(db, 'products');
+  const productSnapshot = await getDocs(productsCollection);
+  const products: Product[] = productSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Product));
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
