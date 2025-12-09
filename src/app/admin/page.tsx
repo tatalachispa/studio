@@ -15,6 +15,27 @@ import { Textarea } from '@/components/ui/textarea';
 import type { Product } from '@/lib/types';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Terminal } from 'lucide-react';
+
+function FirebaseCredentialsCheck() {
+  const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
+
+  if (!apiKey || apiKey.includes("placeholder")) {
+    return (
+      <Alert variant="destructive" className="mb-8">
+        <Terminal className="h-4 w-4" />
+        <AlertTitle>Configuración Incompleta</AlertTitle>
+        <AlertDescription>
+          No se han encontrado las credenciales de Firebase. Por favor, asegúrate de que tu archivo `.env.local` esté correctamente configurado y que hayas reiniciado el servidor.
+        </AlertDescription>
+      </Alert>
+    );
+  }
+
+  return null;
+}
+
 
 export default function AdminPage() {
   const { toast } = useToast();
@@ -30,9 +51,19 @@ export default function AdminPage() {
   const categories = getSerializableCategories();
 
   const fetchProducts = async () => {
-    const querySnapshot = await getDocs(collection(db, "products"));
-    const productsList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Product));
-    setProducts(productsList);
+    try {
+        const querySnapshot = await getDocs(collection(db, "products"));
+        const productsList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Product));
+        setProducts(productsList);
+    } catch (error: any) {
+        if (error.code === 'permission-denied') {
+             toast({
+                variant: "destructive",
+                title: "Error de Permisos",
+                description: "No tienes permiso para leer los productos. Revisa las reglas de seguridad de Firestore.",
+            });
+        }
+    }
   };
 
   useEffect(() => {
@@ -89,6 +120,7 @@ export default function AdminPage() {
     <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-1 container mx-auto px-4 py-8">
+            <FirebaseCredentialsCheck />
             <div className="grid md:grid-cols-2 gap-12">
                 <div>
                     <Card>
