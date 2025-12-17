@@ -3,7 +3,7 @@ import { getSerializableCategories, getProducts } from '@/lib/data';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import Image from 'next/image';
+import { AppImage } from '@/components/app-image';
 import { DinerSelector } from '@/components/diner-selector';
 import { MenuSection } from '@/components/menu-section';
 import { collection, getDocs } from 'firebase/firestore';
@@ -15,12 +15,11 @@ function HeroSection() {
   return (
     <section className="relative h-[60vh] w-full text-white">
       {heroImage && (
-        <Image
+        <AppImage
           src={heroImage.imageUrl}
           alt={heroImage.description}
           fill
           className="object-cover"
-          data-ai-hint={heroImage.imageHint}
           priority
         />
       )}

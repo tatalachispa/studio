@@ -89,6 +89,76 @@
       "description": "A cozy cafe interior",
       "imageUrl": "https://images.unsplash.com/photo-1579341560277-4dfaddaf6e98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjYWZlJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzY1MjMxODYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cafe interior"
+    },
+    {
+      "id": "logo",
+      "description": "Logo de la aplicación",
+      "imageUrl": "/img/default/logo.png",
+      "imageHint": "app logo",
+      "isLocal": true
+    },
+    {
+      "id": "placeholder-food",
+      "description": "Imagen placeholder para comida",
+      "imageUrl": "/img/default/placeholder-food.jpg",
+      "imageHint": "food placeholder",
+      "isLocal": true
+    },
+    {
+      "id": "hero-background-local",
+      "description": "Fondo hero local",
+      "imageUrl": "/img/default/backgrounds/hero-bg.jpg",
+      "imageHint": "restaurant hero background",
+      "isLocal": true
+    },
+    {
+      "id": "appetizers-category",
+      "description": "Imagen de categoría aperitivos",
+      "imageUrl": "/img/default/categories/appetizers.jpg",
+      "imageHint": "appetizers category",
+      "isLocal": true
+    },
+    {
+      "id": "main-course-category",
+      "description": "Imagen de categoría platos principales",
+      "imageUrl": "/img/default/categories/main-course.jpg",
+      "imageHint": "main course category",
+      "isLocal": true
+    },
+    {
+      "id": "desserts-category",
+      "description": "Imagen de categoría postres",
+      "imageUrl": "/img/default/categories/desserts.jpg",
+      "imageHint": "desserts category",
+      "isLocal": true
+    },
+    {
+      "id": "beverages-category",
+      "description": "Imagen de categoría bebidas",
+      "imageUrl": "/img/default/categories/beverages.jpg",
+      "imageHint": "beverages category",
+      "isLocal": true
+    },
+    {
+      "id": "empanadas",
+      "description": "Empanadas caseras",
+      "imageUrl": "/img/uploads/empanadas.jfif",
+      "imageHint": "empanadas food",
+      "isLocal": true
+    },
+    {
+      "id": "bolognesa",
+      "description": "Pasta boloñesa",
+      "imageUrl": "/img/uploads/bolognesa.jfif",
+      "imageHint": "pasta bolognese",
+      "isLocal": true
+    },
+    {
+      "id": "chori",
+      "description": "Choripan argentino",
+      "imageUrl": "/img/uploads/chori.jfif",
+      "imageHint": "choripan sandwich",
+      "isLocal": true
     }
   ]
 }
