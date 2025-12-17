@@ -42,8 +42,8 @@ export function AppImage({
   const handleError = () => {
     if (!imageError) {
       setImageError(true);
-      // Fallback a imagen placeholder si falla la carga
-      setImageSrc(DEFAULT_IMAGES.placeholderFood);
+      // Fallback a imagen por defecto
+      setImageSrc('/img/uploads/default.jfif');
       onError?.();
     }
   };

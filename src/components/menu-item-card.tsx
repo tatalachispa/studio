@@ -16,7 +16,14 @@ interface MenuItemCardProps {
 export function MenuItemCard({ product }: MenuItemCardProps) {
   const { addItem } = useCart();
   const image = PlaceHolderImages.find(img => img.id === product.imageId);
-  const imageUrl = image?.imageUrl || getProductImage(product.name);
+  
+  // Prioridad: imagen del producto > imagen por nombre > imagen por defecto
+  let imageUrl = '/img/uploads/default.jfif';
+  if (image?.imageUrl) {
+    imageUrl = image.imageUrl;
+  } else {
+    imageUrl = getProductImage(product.name);
+  }
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(amount);
@@ -25,13 +32,14 @@ export function MenuItemCard({ product }: MenuItemCardProps) {
   return (
     <Card className="flex flex-col overflow-hidden transition-shadow hover:shadow-lg">
       <CardHeader className="p-0">
-        <div className="aspect-[4/3] relative">
-          <AppImage
+        <div className="aspect-[4/3] relative overflow-hidden">
+          <img
             src={imageUrl}
             alt={product.name}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              e.currentTarget.src = '/img/uploads/default.jfif';
+            }}
           />
         </div>
       </CardHeader>

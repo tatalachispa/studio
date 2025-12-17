@@ -9,7 +9,7 @@ export const DEFAULT_IMAGES = {
   favicon: '/img/default/favicon.ico',
   
   // Placeholders
-  placeholderFood: '/img/default/placeholder-food.jpg',
+  placeholderFood: '/img/uploads/default.jfif',
   placeholderUser: '/img/default/placeholder-user.png',
   placeholderRestaurant: '/img/default/placeholder-restaurant.jpg',
   

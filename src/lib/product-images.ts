@@ -29,5 +29,5 @@ export function getProductImage(productName: string): string {
   }
   
   // Fallback a imagen por defecto
-  return '/img/default/placeholder-food.svg';
+  return '/img/uploads/default.jfif';
 }
